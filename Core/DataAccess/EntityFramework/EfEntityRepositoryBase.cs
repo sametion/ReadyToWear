@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace Core.DataAccess.EntityFramework
 {
-    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity> // hangi Tablo hangi context ile çalışayım bana bunları ver
-   where TEntity : class, IEntity, new()                     //Generic Constraint
-        where TContext : DbContext, new()
+    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
+        where TEntity : class,IEntity, new() where TContext : DbContext, new()
     {
         public void Add(TEntity entity)
         {
@@ -38,7 +37,6 @@ namespace Core.DataAccess.EntityFramework
             using (TContext context = new TContext())
             {
                 return context.Set<TEntity>().SingleOrDefault(filter);
-
             }
         }
 
@@ -61,4 +59,3 @@ namespace Core.DataAccess.EntityFramework
         }
     }
 }
-

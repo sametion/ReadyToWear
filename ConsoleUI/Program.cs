@@ -13,18 +13,34 @@ using DataAccess.Concrete.EntityFramework;
     private static void CategoryTest()
     {
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-        foreach (var category in categoryManager.GetAll())
+        var result = categoryManager.GetAll();
+        if (result.Success == true)
         {
-            Console.WriteLine(category.CategoryName);
+            foreach (var category in result.Data)
+            {
+                Console.WriteLine(category.CategoryName);
+            }
+        }
+        else 
+        {
+            Console.WriteLine(result.Message);
         }
     }
 
     private static void ProductTest()
     {
         ProductManager productManager = new ProductManager(new EfProductDal());
-        foreach (var product in productManager.GetProductDetails())
+        var result = productManager.GetProductDetails();
+        if (result.Success==true) 
         {
-            Console.WriteLine(product.ProductName+"/"+product.CategoryName);
+            foreach (var product in result.Data)
+            {
+                Console.WriteLine(product.ProductName + "/" + product.CategoryName);
+            }
+        }
+        else
+        {
+            Console.WriteLine(result.Message);
         }
     }
 }

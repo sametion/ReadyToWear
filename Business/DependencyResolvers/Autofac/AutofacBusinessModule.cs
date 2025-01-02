@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Utilities.Results
+namespace Business.DependencyResolvers.Autofac
 {
-    public interface IResult
+    internal class AutofacBusinessModule
     {
-        bool Success { get; }
-        string Message { get; }
     }
 }

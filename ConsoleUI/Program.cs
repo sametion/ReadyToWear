@@ -1,4 +1,5 @@
-﻿using Business.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 
  class Program
@@ -29,7 +30,7 @@ using DataAccess.Concrete.EntityFramework;
 
     private static void ProductTest()
     {
-        ProductManager productManager = new ProductManager(new EfProductDal());
+        ProductManager productManager = new ProductManager(new EfProductDal(),new CategoryManager(new EfCategoryDal()));
         var result = productManager.GetProductDetails();
         if (result.Success==true) 
         {

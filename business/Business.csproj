@@ -9,6 +9,9 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="8.2.0" />
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="Gremlin.Net" Version="3.7.3" />
+    <PackageReference Include="OpenXmlPowerTools" Version="4.5.3.2" />
   </ItemGroup>
 
   <ItemGroup>

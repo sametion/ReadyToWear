@@ -1,10 +1,12 @@
-# ReadyToWear
-sametionProject
-northwind Database
-ReadyToWear Project is suitable for modular PnP (Plug and Play) architecture,
+# ReadyToWear  
+#sametionProject#
+
+#northwind Database#
+
+#ReadyToWear Project is suitable for modular PnP (Plug and Play) architecture,
 adopting CQRS (Command Query Responsibility Segregation) and AOP (Aspect Oriented Programming) approaches, 
-focusing on SOLID principles and Clean Architecture methods.
-manage Nuget packages 
+focusing on SOLID principles and Clean Architecture methods.#
+#manage Nuget packages 
  # microsoft.entityframeworcore.sqlserver
  # microsoft.extension.configuration
  # system.identitymodel.tokens.jwt
